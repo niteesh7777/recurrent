@@ -1,10 +1,12 @@
 import "@/global.css";
+import AreaSafeView from "@/src/components/safe-area-view";
 import { Link } from "expo-router";
-import { Text, View } from "react-native";
+import { Text } from "react-native";
+
 
 export default function Index() {
   return (
-    <View className="flex-1 justify-center items-center bg-background">
+    <AreaSafeView >
       <Text className="text-xl font-bold">Wellcome to home screen</Text>
       <Link
         href={"/onboarding"}
@@ -26,7 +28,7 @@ export default function Index() {
       </Link>
       <Link
         href={{
-          pathname: "/(tabs)/subscriptions/[id]",
+          pathname: "/subscriptions/[id]",
           params: { id: "spotify" },
         }}
         className="mt-4 rounded bg-primary text-white p-4"
@@ -35,13 +37,13 @@ export default function Index() {
       </Link>
       <Link
         href={{
-          pathname: "/(tabs)/subscriptions/[id]",
+          pathname: "/subscriptions/[id]",
           params: { id: "claude" },
         }}
         className="mt-4 rounded bg-primary text-white p-4"
       >
         claude subscription
       </Link>
-    </View>
+    </AreaSafeView>
   );
 }

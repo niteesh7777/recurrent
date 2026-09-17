@@ -1,12 +1,13 @@
+import AreaSafeView from "@/src/components/safe-area-view";
 import { useLocalSearchParams } from "expo-router";
-import { Text, View } from "react-native";
+import { Text } from "react-native";
 
 const SubscriptionDetails = () => {
   const { id } = useLocalSearchParams();
   return (
-    <View>
+    <AreaSafeView>
       <Text>SubscriptionDetails : {id}</Text>
-    </View>
+    </AreaSafeView>
   );
 };
 

@@ -1,11 +1,12 @@
-import { View, Text } from 'react-native'
+import AreaSafeView from "@/src/components/safe-area-view";
+import { Text } from "react-native";
 
 const Insights = () => {
   return (
-    <View>
+    <AreaSafeView>
       <Text>Insights</Text>
-    </View>
-  )
-}
+    </AreaSafeView>
+  );
+};
 
-export default Insights
+export default Insights;
